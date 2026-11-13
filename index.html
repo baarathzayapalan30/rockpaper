@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1f3756">
+
+    <title>Rock Paper Scissors</title>
+
+    <link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <img src="./images/logo.svg"
+                 alt="Rock Paper Scissors"
+                 class="logo">
+
+            <div class="score-box">
+                <span>SCORE</span>
+                <h1 id="score">0</h1>
+            </div>
+
+        </header>
+
+        <!-- GAME SECTION -->
+        <section class="game-area" id="gameArea">
+
+            <img src="./images/bg-triangle.svg"
+                 alt=""
+                 class="triangle">
+
+            <button class="choice paper"
+                    data-choice="paper"
+                    aria-label="Choose paper">
+
+                <img src="./images/icon-paper.svg" alt="Paper">
+
+            </button>
+
+            <button class="choice scissors"
+                    data-choice="scissors"
+                    aria-label="Choose scissors">
+
+                <img src="./images/icon-scissors.svg" alt="Scissors">
+
+            </button>
+
+            <button class="choice rock"
+                    data-choice="rock"
+                    aria-label="Choose rock">
+
+                <img src="./images/icon-rock.svg" alt="Rock">
+
+            </button>
+
+        </section>
+
+        <!-- RESULT SECTION -->
+        <section class="result-area" id="resultArea" hidden>
+
+            <div class="result-player">
+
+                <h2>YOU PICKED</h2>
+
+                <div id="playerChoice" class="result-circle"></div>
+
+            </div>
+
+            <div class="result-message">
+
+                <h2 id="resultText">YOU WIN</h2>
+
+                <button id="playAgain" class="play-again">
+                    PLAY AGAIN
+                </button>
+
+            </div>
+
+            <div class="result-player">
+
+                <h2>THE HOUSE PICKED</h2>
+
+                <div id="computerChoice" class="result-circle"></div>
+
+            </div>
+
+        </section>
+
+        <!-- RULES BUTTON -->
+        <button class="rules-button" id="rulesButton">
+            RULES
+        </button>
+
+        <!-- RULES MODAL -->
+        <div class="rules-modal" id="rulesModal" hidden>
+
+            <div class="rules-content">
+
+                <div class="rules-header">
+                    <h2>RULES</h2>
+
+                    <button class="close-button"
+                            id="closeRules"
+                            aria-label="Close rules">
+                        <img src="./images/icon-close.svg" alt="">
+                    </button>
+                </div>
+
+                <img src="./images/image-rules.svg"
+                     alt="Rock Paper Scissors game rules"
+                     class="rules-image">
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
